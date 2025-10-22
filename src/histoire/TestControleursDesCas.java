@@ -15,8 +15,6 @@ import villagegaulois.Village;
 
 public class TestControleursDesCas {
 	public static void main(String[] args) {
-
-		//TODO decommenter les cas au fur et a mesure que vous avancez dans le TP
 		
 		Village village = new Village("le village des irréductibles", 10, 5);
 		Chef abraracourcix = new Chef("Abraracourcix", 10, village);
@@ -82,26 +80,26 @@ public class TestControleursDesCas {
 
 		// Cas 5 : trouverEtalVendeur
 
-//		System.out.println("///////////////////////////////");
-//		System.out.println("Cas 5 : trouver etal vendeur");
-//		ControlTrouverEtalVendeur controlTrouverEtalVendeur = new ControlTrouverEtalVendeur(
-//				village);
-//		Etal etalObelix = controlTrouverEtalVendeur
-//				.trouverEtalVendeur("Obelix");
-//		Etal etalIntrus = controlTrouverEtalVendeur
-//				.trouverEtalVendeur("Intrus");
-//		System.out.print("L'étal d'Obélix");
-//		if (etalObelix != null) {
-//			System.out.println(" est trouvé");
-//		} else {
-//			System.out.println(" n'est pas trouvé");
-//		}
-//		System.out.print("L'étal de Intrus");
-//		if (etalIntrus != null) {
-//			System.out.println(" est trouvé");
-//		} else {
-//			System.out.println(" n'est pas trouvé");
-//		}
+		System.out.println("///////////////////////////////");
+		System.out.println("Cas 5 : trouver etal vendeur");
+		ControlTrouverEtalVendeur controlTrouverEtalVendeur = new ControlTrouverEtalVendeur(
+				village);
+		Etal etalObelix = controlTrouverEtalVendeur
+				.trouverEtalVendeur("Obelix");
+		Etal etalIntrus = controlTrouverEtalVendeur
+				.trouverEtalVendeur("Intrus");
+		System.out.print("L'étal d'Obélix");
+		if (etalObelix != null) {
+			System.out.println(" est trouvé");
+		} else {
+			System.out.println(" n'est pas trouvé");
+		}
+		System.out.print("L'étal de Intrus");
+		if (etalIntrus != null) {
+			System.out.println(" est trouvé");
+		} else {
+			System.out.println(" n'est pas trouvé");
+		}
 		
 
 //		Sortie Console :
@@ -112,23 +110,23 @@ public class TestControleursDesCas {
 
 		// Cas 6 : libererEtal
 
-//		System.out.println("///////////////////////////////");
-//		System.out.println("Cas 6 : Liberer etal");
-//		ControlLibererEtal controlLibererEtal = new ControlLibererEtal(
-//				controlTrouverEtalVendeur);
-//		String[] ventesObelix = controlLibererEtal.libererEtal("Obelix");
-//		System.out.println("Les ventes d'Obelix : ");
-//		System.out.println("[0] : un boolean indiquant si l'étal est occupé ");
-//		System.out.println("[1] : nom du vendeur");
-//		System.out.println("[2] : produit vendu");
-//		System.out.println(
-//				"[3] : quantité de produit à vendre au début du marché");
-//		System.out.println("[4] : quantité de produit vendu");
-//		for (String string : ventesObelix) {
-//			System.out.println(string);
-//		}
-//		String[] ventesIntrus = controlLibererEtal.libererEtal("Intrus");
-//		System.out.println("Les ventes d'Intrus : " + ventesIntrus);
+		System.out.println("///////////////////////////////");
+		System.out.println("Cas 6 : Liberer etal");
+		ControlLibererEtal controlLibererEtal = new ControlLibererEtal(
+				controlTrouverEtalVendeur);
+		String[] ventesObelix = controlLibererEtal.libererEtal("Obelix");
+		System.out.println("Les ventes d'Obelix : ");
+		System.out.println("[0] : un boolean indiquant si l'étal est occupé ");
+		System.out.println("[1] : nom du vendeur");
+		System.out.println("[2] : produit vendu");
+		System.out.println(
+				"[3] : quantité de produit à vendre au début du marché");
+		System.out.println("[4] : quantité de produit vendu");
+		for (String string : ventesObelix) {
+			System.out.println(string);
+		}
+		String[] ventesIntrus = controlLibererEtal.libererEtal("Intrus");
+		System.out.println("Les ventes d'Intrus : " + ventesIntrus);
 		
 
 //		Sortie Console :
