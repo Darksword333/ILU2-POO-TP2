@@ -22,9 +22,10 @@ public class BoundaryAfficherMarche {
 			for (int i = 0, j = 0; i < data.length; i++) {
 				vendeur = data[i];
 				i++;
-				quantite = data[i];
+				quantite = Integer.parseInt(data[i]);
 				i++;
 				produit = data[i];
+				System.out.println("- " + vendeur + " qui vend " + quantite + " " + produit + "\n");
 			}
 		}
 	}
