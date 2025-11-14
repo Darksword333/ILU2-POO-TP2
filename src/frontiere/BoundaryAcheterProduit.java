@@ -1,7 +1,6 @@
 package frontiere;
 
 import controleur.ControlAcheterProduit;
-import personnages.Gaulois;
 
 public class BoundaryAcheterProduit {
 	private ControlAcheterProduit controlAcheterProduit;
@@ -19,15 +18,15 @@ public class BoundaryAcheterProduit {
 			produit = Clavier.entrerChaine("Quel produit voulez-vous acheter ?\n");
 		
 			sb.append("Chez quel commerçant voulez-vous acheter des " + produit + " ?\n");
-			Gaulois[] marchands = this.controlAcheterProduit.chercherMarchand(produit);
+			String[] marchands = this.controlAcheterProduit.chercherMarchand(produit);
 			
 			if (marchands != null) { // Si le produit est bien sur le marché
 		
 				for (int i = 0; i < marchands.length; i++) {
-					sb.append((i+1) + " - " + marchands[i].getNom() + "\n");
+					sb.append((i+1) + " - " + marchands[i] + "\n");
 				}
 				numVendeur = Clavier.entrerEntier(sb.toString());
-				nomVendeur = marchands[numVendeur-1].getNom();
+				nomVendeur = marchands[numVendeur-1];
 				
 				nombre = Clavier.entrerEntier("Combien de fleurs voulez-vous acheter ?\n");
 				

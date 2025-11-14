@@ -27,6 +27,13 @@ class ControlEmmenagerTest {
 	}
 	
 	@Test
+	void testAjouterDruide() {
+		assertFalse(cm.isHabitant("Panoramix"));
+		cm.ajouterDruide("Panoramix", 3, 1, 2);
+		assertTrue(cm.isHabitant("Panoramix"));
+	}
+	
+	@Test
 	void testChefisHabitant() {
 		assertTrue(cm.isHabitant("LeChef"));
 	}

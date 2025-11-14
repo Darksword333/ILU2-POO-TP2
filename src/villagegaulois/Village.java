@@ -82,13 +82,6 @@ public class Village {
 		return indiceEtal;
 	}
 
-	public void partirVendeur(Gaulois vendeur) {
-		Etal etal = marche.trouverVendeur(vendeur);
-		if (etal != null) {
-			etal.libererEtal();
-		}
-	}
-
 	public boolean rechercherEtalVide() {
 		return marche.trouverEtalLibre() != -1;
 	}

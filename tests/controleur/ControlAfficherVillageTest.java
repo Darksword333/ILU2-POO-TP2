@@ -39,6 +39,9 @@ class ControlAfficherVillageTest {
 		assertEquals(villageois.length, 1);
 		villageois = cv.donnerNomsVillageois();
 		assertEquals(villageois[1], "Bonemine");
+		cm.ajouterDruide("Panoramix", 3, 1, 2);
+		villageois = cv.donnerNomsVillageois();
+		assertEquals(villageois[2], "le druide Panoramix");
 	}
 
 }
