@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import personnages.Chef;
+import villagegaulois.Etal;
 import villagegaulois.Village;
 
 class ControlLibererEtalTest {
@@ -25,15 +26,21 @@ class ControlLibererEtalTest {
 		cp = new ControlPrendreEtal(cv, village);
 		cev = new ControlTrouverEtalVendeur(village);
 		cl = new ControlLibererEtal(cev);
+		cm.ajouterGaulois("Bonemine", 1);
+		cp.prendreEtal("Bonemine", "fleurs", 10);
 	}
 
 	@Test
 	void testIsVendeur() {
-		cm.ajouterGaulois("Bonemine", 1);
-		cp.prendreEtal("Bonemine", "fleurs", 10);
 		assertTrue(cl.isVendeur("Bonemine"));
 		assertFalse(cl.isVendeur("Intru"));
 		assertFalse(cl.isVendeur("LeChef"));
+	}
+	
+	@Test
+	void testLibererEtal() {
+		assertNull(cl.libererEtal("Intru"));
+		assertNotNull(cl.libererEtal("Bonemine"));
 	}
 
 }
